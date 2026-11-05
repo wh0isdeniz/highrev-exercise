@@ -123,3 +123,5 @@ All reproduced numeric metrics match exactly in the observed logs, within the as
 - [x] Fresh-clone reproduction log
 - [x] Student ID and repository location
 - [x] Dataset ID status explained
+
+Note : The original CSV files were provided by the instructor and are available to them. The raw data is intentionally excluded from Git and tracked through DVC.

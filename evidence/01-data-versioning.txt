@@ -1,17 +1,17 @@
-Git commit:
+=== ORIGINAL EXPERIMENT COMMIT ===
 e5d99416ace81fe560a90380c0f32349cce19a42
-DVC pointer:
+=== DVC POINTER ===
 outs:
 - md5: 0a781b76b6f1620fda61c12f2bb9fa15.dir
   size: 64342
   nfiles: 2
   hash: md5
   path: 01_raw
-CSV SHA256:
+=== CSV SHA256 HASHES ===
 7c99856c33d687eac2e364fc8a049ef70b9786e94ff43b6c2a2d92dc78910cbb  data/01_raw/orders.csv
 e04aa3336b0cc9800220853d8c17a320e72d6764722b401e5e93d6c8b7a1713f  data/01_raw/restaurants.csv
-DVC status:
+=== GIT STATUS (EMPTY = CLEAN) ===
+=== DVC STATUS ===
 Data and pipelines are up to date.
-Git status:
-?? Pizza_Panic_Evidence.md
-?? evidence/
+=== DVC REMOTE VERIFICATION ===
+Everything is up to date.

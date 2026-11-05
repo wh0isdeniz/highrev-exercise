@@ -1,14 +1,13 @@
-Kedro registered pipelines:
-[11/05/26 19:23:20] INFO     Using '/Users/denizerdemozkan/Desktop/highrev-exercise/.venv/lib/python3.12/site-packages/kedro/framework/project/rich_logging.yml' __init__.py:347
-                             as logging configuration.                                                                                                                          
-- __default__
-- pizza_panic
+=== PIZZA PANIC KEDRO EXECUTION EVIDENCE ===
+Source: fresh-clone reproduction log
 
-Pizza Panic pipeline:
-[11/05/26 19:23:22] INFO     Using '/Users/denizerdemozkan/Desktop/highrev-exercise/.venv/lib/python3.12/site-packages/kedro/framework/project/rich_logging.yml' __init__.py:347
-                             as logging configuration.                                                                                                                          
-Nodes:
-- prepare_pizza_features (prepare_features)
-- split_pizza_data (split_data)
-- search_pizza_candidates (search_candidates)
-
+                    INFO     Running node: prepare_pizza_features: prepare_features([pizza_orders;pizza_restaurants]) -> [pizza_features]                            node.py:531
+                    INFO     Completed node: prepare_pizza_features                                                                                                runner.py:245
+                    INFO     Completed 1 out of 3 tasks                                                                                                            runner.py:246
+                    INFO     Running node: split_pizza_data: split_data([pizza_features;params:pizza_settings]) -> [pizza_split]                                     node.py:531
+                    INFO     Completed node: split_pizza_data                                                                                                      runner.py:245
+                    INFO     Completed 2 out of 3 tasks                                                                                                            runner.py:246
+                    INFO     Running node: search_pizza_candidates: search_candidates([pizza_split;params:pizza_settings;params:pizza_selection]) ->                 node.py:531
+                    INFO     Completed node: search_pizza_candidates                                                                                               runner.py:245
+                    INFO     Completed 3 out of 3 tasks                                                                                                            runner.py:246
+                    INFO     Pipeline execution completed successfully in 0.1 sec.                                                                                 runner.py:119

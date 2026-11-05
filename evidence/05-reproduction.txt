@@ -1,19 +1,249 @@
-Fresh clone Git commit:
+=== FRESH CLONE RECOVERY ===
+Cloning into '/Users/denizerdemozkan/Desktop/highrev-exercise-final-audit'...
+done.
+HEAD is now at e5d9941 Set up Pizza Panic Kedro pipeline and MLflow tracking
+=== EXACT GIT COMMIT ===
 e5d99416ace81fe560a90380c0f32349cce19a42
-DVC pointer:
+=== DATA BEFORE DVC PULL ===
+ls: data/01_raw/: No such file or directory
+=== INSTALL DEPENDENCIES ===
+Using CPython 3.12.16
+Creating virtual environment at: .venv
+Resolved 177 packages in 16ms
+   Building highrev-exercise @ file:///Users/denizerdemozkan/Desktop/highrev-exercise-final-audit
+      Built highrev-exercise @ file:///Users/denizerdemozkan/Desktop/highrev-exercise-final-audit
+Prepared 1 package in 640ms
+Installed 175 packages in 792ms
+ + aiohappyeyeballs==2.7.1
+ + aiohttp==3.14.5
+ + aiohttp-retry==2.9.1
+ + aiosignal==1.4.0
+ + alembic==1.20.1
+ + amqp==5.4.2
+ + annotated-doc==0.0.5
+ + annotated-types==0.8.0
+ + antlr4-python3-runtime==4.9.3
+ + anyio==4.16.0
+ + appdirs==1.4.4
+ + arrow==1.4.0
+ + asyncssh==2.24.1
+ + atpublic==9.0.0
+ + attrs==26.1.0
+ + billiard==4.3.2
+ + binaryornot==0.6.0
+ + blinker==1.9.0
+ + build==1.6.1
+ + cachetools==7.2.8
+ + celery==5.6.3
+ + certifi==2026.10.23
+ + cffi==2.1.1
+ + charset-normalizer==3.5.2
+ + click==8.5.0
+ + click-didyoumean==0.3.1
+ + click-plugins==1.1.1.2
+ + click-repl==0.4.1
+ + cloudpickle==3.1.2
+ + colorama==0.4.6
+ + compress-pickle==2.1.0
+ + configobj==5.0.9
+ + contourpy==1.4.0
+ + cookiecutter==2.7.1
+ + cryptography==50.0.2
+ + cycler==0.12.1
+ + databricks-sdk==0.161.0
+ + dictdiffer==0.10.0
+ + diskcache==5.6.3
+ + distro==1.9.0
+ + docker==7.2.0
+ + dpath==2.2.0
+ + dulwich==1.2.20
+ + dvc==3.67.1
+ + dvc-data==3.18.3
+ + dvc-http==2.32.0
+ + dvc-objects==5.2.0
+ + dvc-render==1.0.2
+ + dvc-studio-client==0.23.0
+ + dvc-task==0.40.2
+ + dynaconf==3.3.5
+ + entrypoints==0.4.2
+ + fastapi==0.162.0
+ + filelock==4.2.9
+ + flask==3.1.3
+ + flask-cors==6.0.5
+ + flatten-dict==0.5.0
+ + flufl-lock==9.2.0
+ + fonttools==4.68.0
+ + frozenlist==1.8.0
+ + fsspec==2026.9.0
+ + funcy==2.1
+ + gitdb==4.0.12
+ + gitpython==3.2.1
+ + google-auth==2.62.1
+ + grandalf==0.8
+ + graphene==3.4.3
+ + graphql-core==3.2.13
+ + graphql-relay==3.2.0
+ + gto==1.10.1
+ + gunicorn==26.2.0
+ + h11==0.16.0
+ + highrev-exercise==0.1.0 (from file:///Users/denizerdemozkan/Desktop/highrev-exercise-final-audit)
+ + huey==3.5.4
+ + hydra-core==1.3.8
+ + idna==3.20
+ + importlib-metadata==9.1.0
+ + iterative-telemetry==0.0.10
+ + itsdangerous==2.2.0
+ + jinja2==3.1.6
+ + joblib==1.6.0
+ + kedro==1.7.0
+ + kedro-datasets==9.6.0
+ + kedro-telemetry==0.9.0
+ + kiwisolver==1.5.1
+ + kombu==5.7.0
+ + lazy-loader==0.6
+ + lz4==4.4.5
+ + mako==1.4.3
+ + markdown-it-py==4.2.0
+ + markupsafe==3.0.4
+ + matplotlib==3.11.2
+ + mdurl==0.1.2
+ + mlflow==3.16.1
+ + mlflow-skinny==3.16.1
+ + mlflow-tracing==3.16.1
+ + more-itertools==11.2.1
+ + multidict==7.2.1
+ + narwhals==2.28.0
+ + networkx==3.7
+ + numpy==2.5.4
+ + omegaconf==2.3.1
+ + opentelemetry-api==1.45.2
+ + opentelemetry-proto==1.45.2
+ + opentelemetry-sdk==1.45.2
+ + opentelemetry-semantic-conventions==0.66b2
+ + orjson==3.13.0
+ + packaging==26.3
+ + pandas==3.1.1
+ + parse==1.22.4
+ + pathspec==1.1.1
+ + pillow==13.0.0
+ + platformdirs==4.14.5
+ + pluggy==1.7.0
+ + prettytable==3.18.0
+ + prompt-toolkit==3.0.53
+ + propcache==0.5.4
+ + protobuf==7.36.2
+ + psutil==7.2.2
+ + pyarrow==25.0.1
+ + pyasn1==0.6.5
+ + pyasn1-modules==0.4.2
+ + pycparser==3.12
+ + pydantic==2.14.2
+ + pydantic-core==2.50.2
+ + pydantic-settings==2.16.2
+ + pydot==4.0.1
+ + pygit2==1.21.0
+ + pygments==2.21.0
+ + pygtrie==2.6.2
+ + pyparsing==3.3.3
+ + pyproject-hooks==1.3.3
+ + python-dateutil==2.9.0.post0
+ + python-dotenv==1.2.4
+ + python-slugify==9.1.3
+ + pyyaml==6.0.3
+ + requests==2.34.2
+ + rich==15.0.0
+ + ruamel-yaml==0.19.1
+ + scikit-learn==1.9.1
+ + scipy==1.18.1
+ + scmrepo==3.6.2
+ + semver==3.1.0
+ + setuptools==84.2.1
+ + shortuuid==1.0.13
+ + shtab==1.13.0
+ + six==1.17.0
+ + skops==0.16.0
+ + smmap==5.0.3
+ + sqlalchemy==2.1.8
+ + sqlparse==0.6.1
+ + sqltrie==0.11.3
+ + starlette==1.10.0
+ + tabulate==0.10.0
+ + text-unidecode==1.3
+ + threadpoolctl==3.7.0
+ + tomli-w==1.2.0
+ + tomlkit==0.15.2
+ + tqdm==4.70.1
+ + typing-extensions==4.16.0
+ + typing-inspection==0.4.5
+ + tzdata==2026.6
+ + tzlocal==5.4.5
+ + ua-parser==1.0.2
+ + ua-parser-builtins==202610
+ + urllib3==2.8.0
+ + user-agents==2.2.0
+ + uvicorn==0.54.0
+ + vine==5.1.0
+ + voluptuous==0.16.0
+ + wcwidth==0.9.4
+ + werkzeug==3.1.9
+ + yarl==1.25.1
+ + zc-lockfile==4.0
+ + zipp==4.1.2
+=== CONFIGURE DVC REMOTE ===
+Setting 'pizza' as a default remote.
+=== DVC PULL ===
+A       data/01_raw/
+3 files fetched and 2 files added
+=== DATA HASHES ===
 outs:
 - md5: 0a781b76b6f1620fda61c12f2bb9fa15.dir
   size: 64342
   nfiles: 2
   hash: md5
   path: 01_raw
-CSV hashes:
 7c99856c33d687eac2e364fc8a049ef70b9786e94ff43b6c2a2d92dc78910cbb  data/01_raw/orders.csv
 e04aa3336b0cc9800220853d8c17a320e72d6764722b401e5e93d6c8b7a1713f  data/01_raw/restaurants.csv
-Git status:
-DVC status:
-warning: `VIRTUAL_ENV=/Users/denizerdemozkan/Desktop/highrev-exercise/.venv` does not match the project environment path `.venv` and will be ignored; use `--active` to target the active environment instead
+=== REPRODUCTION EXECUTION ===
+[11/05/26 19:50:59] INFO     Using                                                                                                                               __init__.py:347
+                             '/Users/denizerdemozkan/Desktop/highrev-exercise-final-audit/.venv/lib/python3.12/site-packages/kedro/framework/project/rich_loggin                
+                             g.yml' as logging configuration.                                                                                                                   
+2026/11/05 19:51:18 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
+2026/11/05 19:51:18 INFO mlflow.store.db.utils: Updating database tables
+2026/11/05 19:51:18 INFO mlflow.tracking.fluent: Experiment with name 'pizza-panic-bonus' does not exist. Creating a new experiment.
+Parent run ID: fc158cee452a448199916536e39c9a16
+[11/05/26 19:51:19] INFO     Kedro project highrev                                                                                                                session.py:329
+                    WARNING  `pipeline_name` is deprecated and will be removed in a future release. Please use `pipeline_names` instead.                          session.py:331
+                    INFO     No typed parameter requirements found, returning original parameters                                                     parameter_validator.py:124
+                    INFO     Using synchronous mode for loading and saving data. Use the --async flag for potential performance gains.                   sequential_runner.py:59
+                             https://docs.kedro.org/en/stable/build/run_a_pipeline/#load-and-save-asynchronously                                                                
+                    INFO     Loading data from pizza_orders (CSVDataset)...                                                                                 data_catalog.py:1151
+                    INFO     Loading data from pizza_restaurants (CSVDataset)...                                                                            data_catalog.py:1151
+                    INFO     Running node: prepare_pizza_features: prepare_features([pizza_orders;pizza_restaurants]) -> [pizza_features]                            node.py:531
+                    INFO     Saving data to pizza_features (MemoryDataset)...                                                                               data_catalog.py:1097
+                    INFO     Completed node: prepare_pizza_features                                                                                                runner.py:245
+                    INFO     Completed 1 out of 3 tasks                                                                                                            runner.py:246
+                    INFO     Loading data from pizza_features (MemoryDataset)...                                                                            data_catalog.py:1151
+                    INFO     Loading data from params:pizza_settings (MemoryDataset)...                                                                     data_catalog.py:1151
+                    INFO     Running node: split_pizza_data: split_data([pizza_features;params:pizza_settings]) -> [pizza_split]                                     node.py:531
+                    INFO     Saving data to pizza_split (MemoryDataset)...                                                                                  data_catalog.py:1097
+                    INFO     Completed node: split_pizza_data                                                                                                      runner.py:245
+                    INFO     Completed 2 out of 3 tasks                                                                                                            runner.py:246
+                    INFO     Loading data from pizza_split (MemoryDataset)...                                                                               data_catalog.py:1151
+                    INFO     Loading data from params:pizza_settings (MemoryDataset)...                                                                     data_catalog.py:1151
+                    INFO     Loading data from params:pizza_selection (MemoryDataset)...                                                                    data_catalog.py:1151
+                    INFO     Running node: search_pizza_candidates: search_candidates([pizza_split;params:pizza_settings;params:pizza_selection]) ->                 node.py:531
+                             [pizza_results;pizza_models]                                                                                                                       
+                    INFO     Saving data to pizza_results (CSVDataset)...                                                                                   data_catalog.py:1097
+                    INFO     Saving data to pizza_models (PickleDataset)...                                                                                 data_catalog.py:1097
+                    INFO     Completed node: search_pizza_candidates                                                                                               runner.py:245
+                    INFO     Completed 3 out of 3 tasks                                                                                                            runner.py:246
+                    INFO     Pipeline execution completed successfully in 0.1 sec.                                                                                 runner.py:119
+2026/11/05 19:51:20 INFO mlflow.utils.uv_utils: Detected uv project: found uv.lock and pyproject.toml in /Users/denizerdemozkan/Desktop/highrev-exercise-final-audit
+2026/11/05 19:51:20 WARNING mlflow.sklearn: Saving scikit-learn models in the pickle or cloudpickle format requires exercising caution because these formats rely on Python's object serialization mechanism, which can execute arbitrary code during deserialization. The recommended safe alternative is the 'skops' format. For more information, see: https://scikit-learn.org/stable/model_persistence.html
+2026/11/05 19:51:20 WARNING mlflow.utils.environment: Failed to resolve installed pip version. ``pip`` will be added to conda.yaml environment spec without a version specifier.
+Candidate 56698e014cc146d9bacf619c1420a201: C=5.0 t=0.2 {'val_roc_auc': 0.7526793916505053, 'val_f1': 0.5214285714285715, 'val_precision': 0.3989071038251366, 'val_recall': 0.7525773195876289, 'val_predicted_late': 183.0}
+  C  threshold  val_roc_auc   val_f1  val_precision  val_recall  val_predicted_late
+5.0        0.2     0.752679 0.521429       0.398907    0.752577                 183
+=== FINAL DVC STATUS ===
 Data and pipelines are up to date.
-Reproduction results:
-C,threshold,val_roc_auc,val_f1,val_precision,val_recall,val_predicted_late
-5.0,0.2,0.7526793916505053,0.5214285714285715,0.3989071038251366,0.7525773195876289,183
+=== FINAL GIT STATUS ===

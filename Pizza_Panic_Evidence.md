@@ -1,16 +1,17 @@
-# Pizza Panic — my completed experiment
+# Pizza Panic — My Completed Experiment
 
 ## 1. Identity and data versioning
 
 | Field | My evidence |
 | --- | --- |
-| Student ID / assigned dataset A–E | **[STUDENT ID / DATASET LETTER — TO FILL]** |
-| Submitted repository or bundle | **[REPOSITORY URL OR SUBMISSION BUNDLE — TO FILL]** |
+| Student ID | S31409 |
+| Dataset ID | Not specified — CSV files provided by the instructor via Microsoft Teams |
+| Submitted repository or bundle | https://github.com/wh0isdeniz/highrev-exercise |
 | Exact Git commit SHA | `e5d99416ace81fe560a90380c0f32349cce19a42` |
 | DVC directory hash: `outs[0].md5` | `0a781b76b6f1620fda61c12f2bb9fa15.dir` |
 | SHA256 of `orders.csv` | `7c99856c33d687eac2e364fc8a049ef70b9786e94ff43b6c2a2d92dc78910cbb` |
 | SHA256 of `restaurants.csv` | `e04aa3336b0cc9800220853d8c17a320e72d6764722b401e5e93d6c8b7a1713f` |
-| DVC push and clean Git/DVC evidence | **[Attach DVC push log, `git status --short`, `dvc status`, hash verification screenshots/logs]** |
+| DVC push and clean Git/DVC evidence | [Data versioning evidence](evidence/01-data-versioning.txt) |
 | Parent search run ID / final status | `2f8f125b0eba4f628253a37c7b761746` / Finished |
 
 Git identifies the exact committed source, configuration and DVC pointer used for the experiment. DVC identifies the raw dataset version via `data/01_raw.dvc`, and the SHA256 digests additionally identify both CSV files. The raw files are stored in the DVC cache and a separately configured local DVC remote (`../highrev-exercise-dvc-remote`), not Git. MLflow stores searchable parameters, validation metrics, model artifacts, comparison artifacts, and provenance tags such as the Git SHA and DVC hash. The local remote is not automatically available to another computer; it must be provided or replaced with an accessible remote for third-party reproduction.
@@ -27,7 +28,7 @@ Git identifies the exact committed source, configuration and DVC pointer used fo
 - **Catalog types and paths:** `pizza_orders`: `pandas.CSVDataset` at `data/01_raw/orders.csv`; `pizza_restaurants`: `pandas.CSVDataset` at `data/01_raw/restaurants.csv`; `pizza_results`: `pandas.CSVDataset` at `data/08_reporting/pizza_comparison.csv`, saved with `index: false`; `pizza_models`: `pickle.PickleDataset` at `data/06_models/pizza_models.pickle`.
 - **Configuration environment and tag:** `conf/pizza` overlays `conf/base`; run with `env="pizza"`. MLflow records `kedro.env=pizza` and `kedro.pipeline=pizza_panic`.
 - **Adapter execution call:** `return session.run(pipeline_name="pizza_panic")` in `src/highrev/pizza_run.py`.
-- **Graph or execution-log attachment:** **[Attach the log showing three completed Kedro nodes, or a graph screenshot]**.
+- **Graph or execution-log attachment:** [Kedro execution log](evidence/04-kedro-execution.txt)
 - **Memory versus persistent datasets:** `pizza_features` and `pizza_split` are implicit `MemoryDataset` intermediates, used within the run. The two input CSVs, comparison CSV, and pickle model outputs are file-backed datasets that survive the execution. DVC versions the raw CSV directory, not generated results.
 - **Parameter wiring:** `conf/pizza/parameters_pizza.yml` supplies `pizza_settings` (`C` grid, thresholds, split settings and `max_iter`) and `pizza_selection` via `params:` inputs to Kedro nodes. The adapter can override the whole selection mapping at runtime for reproduction without modifying tracked source.
 - **Environment overlay:** Kedro loads shared `conf/base` configuration and the selected `conf/pizza` overlay. The adapter explicitly creates `KedroSession` with `env="pizza"`; the CLI equivalent is `--env pizza`.
@@ -54,7 +55,13 @@ All candidate results below are from the **validation partition** and the first 
 | 5.00 | 0.65 | `e6e301efcb0144b6abcf68cbbec45644` | Finished | 0.752679 | 0.093458 |
 | 5.00 | 0.80 | `d04f523f7aae4f52a1eaf44dd9979a90` | Finished | 0.752679 | 0.000000 |
 
-**Scatterplot:** **[Attach MLflow parent artifact `comparison/auc_vs_f1.png`]**. **MLflow evidence:** **[Attach parent/child run screenshots and/or `pizza_comparison.csv`]**.
+**Scatterplot:**
+
+![Validation ROC AUC vs F1](evidence/03-scatterplot.png)
+
+**MLflow candidate runs:**
+
+![MLflow experiment runs](evidence/02-mlflow-runs.png)
 
 **My observation:** For a fixed `C`, ROC AUC stays unchanged across the five thresholds, because ROC AUC measures probability ranking and is not determined by a single binary classification threshold. F1 changes substantially as the threshold changes. For example, at `C=5.0`, lowering the threshold from 0.50 to 0.20 raises validation recall from approximately 0.0722 to 0.7526 and F1 from 0.1228 to 0.5214, but increases the predicted late warnings from 17 to 183. All three `C` settings have very similar ROC AUC values (about 0.7527–0.7549), while the decision threshold has a much larger effect on the practical warning policy.
 
@@ -71,7 +78,7 @@ All candidate results below are from the **validation partition** and the first 
 
 ## 5. Fresh-clone recovery
 
-- **Recovery transcript:** **[Attach terminal log showing new clone, initial absence of CSVs, `uv sync --locked`, DVC remote configuration, `dvc pull`, file hashes, clean Git/DVC, and reproduction execution. The available evidence confirms successful run and hashes; include the earlier pull log if retained.]**
+- **Recovery transcript:** [Fresh-clone reproduction evidence](evidence/05-reproduction.txt)
 - **Exact selected reproduction command:**
 
 ```bash
@@ -107,11 +114,12 @@ All reproduced numeric metrics match exactly in the observed logs, within the as
 
 ---
 
-## Attachments checklist (not part of the template)
+## Attachments checklist
 
-- [ ] DVC push + data hash + clean `git status` and `dvc status` log
-- [ ] MLflow search parent run and 15 completed child runs screenshot
-- [ ] `comparison/auc_vs_f1.png` screenshot or exported image
-- [ ] Three Kedro node execution log or graph
-- [ ] Fresh clone, DVC pull, hashes, and reproduced run log
-- [ ] Student ID, assigned dataset letter, and repository/bundle location filled in
+- [x] DVC data hash and Git/DVC status evidence
+- [x] MLflow candidate runs screenshot
+- [x] ROC AUC vs F1 scatterplot
+- [x] Kedro execution log
+- [x] Fresh-clone reproduction log
+- [x] Student ID and repository location
+- [x] Dataset ID status explained

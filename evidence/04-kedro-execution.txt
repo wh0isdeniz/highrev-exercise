@@ -1,0 +1,14 @@
+Kedro registered pipelines:
+[11/05/26 19:23:20] INFO     Using '/Users/denizerdemozkan/Desktop/highrev-exercise/.venv/lib/python3.12/site-packages/kedro/framework/project/rich_logging.yml' __init__.py:347
+                             as logging configuration.                                                                                                                          
+- __default__
+- pizza_panic
+
+Pizza Panic pipeline:
+[11/05/26 19:23:22] INFO     Using '/Users/denizerdemozkan/Desktop/highrev-exercise/.venv/lib/python3.12/site-packages/kedro/framework/project/rich_logging.yml' __init__.py:347
+                             as logging configuration.                                                                                                                          
+Nodes:
+- prepare_pizza_features (prepare_features)
+- split_pizza_data (split_data)
+- search_pizza_candidates (search_candidates)
+
